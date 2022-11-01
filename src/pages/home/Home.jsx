@@ -7,7 +7,7 @@ const Home = () => {
   const APP_KEY = "c23a7f86fcdeddf5d8f0a3b60023f94c";
   const [query, setQuery] = useState("egg");
   const [selectedMeal, setSelectedMeal] = useState("breakfast");
-  const [recipes, setRecipes] = useState("")
+  const [recipes, setRecipes] = useState([])
   const mealType = ["Breakfast", "Lunch", "Dinner", "Snack", "Teatime"]
 
 
@@ -28,9 +28,9 @@ const Home = () => {
 
   return (
     <div>
-      <Header setQuery={setQuery} setSelectedMeal={selectedMeal} />
+      <Header setQuery={setQuery} setSelectedMeal={selectedMeal} mealType={mealType} getData={getData} />
     </div>
   )
 }
 
-export default Home
+export default Home;
