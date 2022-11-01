@@ -2,7 +2,7 @@ import React from 'react'
 import "./Header.style"
 import { Button, FoodInput, FormContainer, HeaderContainer, MainHeader } from './Header.style'
 
-const Header = ({ setQuery }) => {
+const Header = ({ setQuery, setSelectedMeal }) => {
   return (
     <HeaderContainer>
       <MainHeader>
@@ -11,7 +11,13 @@ const Header = ({ setQuery }) => {
       <FormContainer>
         <FoodInput type="text" placeholder='Search'
           onChange={(e) => setQuery(e.target.value)} />
-        <Button type='submit'>SEARCH</Button>      </FormContainer>
+        <Button type='submit'>SEARCH</Button>
+        <Selecet name="mealType" id="mealType"
+          onChange={(e) => setQuery(e.target.value)}
+        >
+
+        </Selecet>
+      </FormContainer>
     </HeaderContainer>
   )
 }
