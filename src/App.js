@@ -1,14 +1,12 @@
 import './App.css';
-import AppRouter from './router/AppRouter';
 
 function App() {
   return (
-    <div>
-     <AppRouter/>
+    <div className="App">
+     RECIPE APP
     </div>
   );
 }
 
 export default App;
-
 
