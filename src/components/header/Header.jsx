@@ -1,8 +1,8 @@
 import React from 'react'
 import "./Header.style"
-import { Button, FoodInput, FormContainer, HeaderContainer, MainHeader } from './Header.style'
+import { Button, FoodInput, FormContainer, HeaderContainer, MainHeader, Select } from './Header.style'
 
-const Header = ({ setQuery, setSelectedMeal }) => {
+const Header = ({ setQuery, setSelectedMeal, mealType, getData }) => {
   return (
     <HeaderContainer>
       <MainHeader>
@@ -12,11 +12,13 @@ const Header = ({ setQuery, setSelectedMeal }) => {
         <FoodInput type="text" placeholder='Search'
           onChange={(e) => setQuery(e.target.value)} />
         <Button type='submit'>SEARCH</Button>
-        <Selecet name="mealType" id="mealType"
+        <Select name="mealType" id="mealType"
           onChange={(e) => setQuery(e.target.value)}
         >
-
-        </Selecet>
+          {mealType.map((meal, index) => (
+            <option key={index} value={meal}>{meal}</option>
+          ))}
+        </Select>
       </FormContainer>
     </HeaderContainer>
   )
