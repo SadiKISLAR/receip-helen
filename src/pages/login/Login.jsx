@@ -8,9 +8,14 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  const userInfo = {
+    username: "Ahmet"
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("-1")
+    sessionStorage.setItem("user", JSON.stringify(userInfo))
+    navigate(-1)
   }
 
   return (
