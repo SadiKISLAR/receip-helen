@@ -22,20 +22,15 @@ const Login = () => {
     <LoginContainer>
       <FormContainer>
         <StyledImg src={meal} />
-        <Header>
-          Shady's Receipe
-        </Header>
+        <Header>Shady's Recipe</Header>
         <StyledForm onSubmit={handleSubmit}>
-          <StyledInput placeholder='Enter User Name' type="text" />
-          <StyledInput placeholder='Enter Password' type="password" />
-          <StyledButton type='submit'>LOGIN
-          </StyledButton>
-
+          <StyledInput placeholder="Enter username" type="text" />
+          <StyledInput placeholder="Enter Password" type="password" />
+          <StyledButton type="submit">Login</StyledButton>
         </StyledForm>
-
       </FormContainer>
     </LoginContainer>
-  )
-}
+  );
+};
 
 export default Login

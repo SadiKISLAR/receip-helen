@@ -9,15 +9,14 @@ const Header = ({ setQuery, setSelectedMeal, mealType, getData }) => {
   }
   return (
     <HeaderContainer>
-      <MainHeader>
-        Recipe App
-      </MainHeader>
+      <MainHeader>Recipe App</MainHeader>
+
       <FormContainer onSubmit={handleSubmit}>
         <FoodInput type="text" placeholder='Search'
           onChange={(e) => setQuery(e.target.value)} />
         <Button type='submit'>SEARCH</Button>
         <Select name="mealType" id="mealType"
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => setSelectedMeal(e.target.value)}
         >
           {mealType.map((meal, index) => (
             <option key={index} value={meal}>{meal}</option>
